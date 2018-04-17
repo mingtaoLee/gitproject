@@ -71,7 +71,7 @@ export default {
                     try {
                         let account = this.form.userName
                         let password = this.form.password
-                        await service.users.signin(account, password)
+                        // await service.users.signin(account, password)
                         // console.log(result)
                         Cookies.set('user', this.form.userName);
                         // Cookies.set('password', this.form.password);
