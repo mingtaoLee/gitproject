@@ -1,0 +1,29 @@
+git init 初始化一个仓库
+git remote add origin github.com/mingtaoLee/gitproject.git 本地仓库和远程仓库关联
+
+添加要上传到远程库的文件，命令如下（选择要提交的文件）：
+git add -A和 git add .   git add -u在功能上看似很相近，但还是存在一点差别
+
+git add . ：他会监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。
+
+git add -u ：他仅监控已经被add的文件（即tracked file），他会将被修改的文件提交到暂存区。add -u 不会提交新文件（untracked file）。（git add --update的缩写）
+
+git add -A ：是上面两个功能的合集（git add --all的缩写）
+
+
+提交说明：
+git commit -m "修改某某文件及bug"
+
+
+git push origin master 将本地更改推送到远程master分支。
+
+
+如果远程仓库上已经有了文件，会出现错误。此时应当先pull一下
+
+git pull origin master
+
+
+然后再
+git push origin master
+
+
